@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class BookTest {
 	
-	private static final String TXT_FILE_LOCATION = "src//files/book_data.txt";
+	private static final String TXT_FILE_LOCATION = "files//book_data.txt";
 	private static final String TXT_FILE_DELIMETER = ",";
 	private static final int TXT_FILE_LENGTH = 3;
 	private static final int POSITION_BOOK_TITLE = 0;
