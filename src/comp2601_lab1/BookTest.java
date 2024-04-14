@@ -14,6 +14,7 @@ import java.util.Scanner;
  */
 public class BookTest {
 	
+	private static final String TXT_FILE_LOCATION = "src//files/book_data.txt";
 	private static final String TXT_FILE_DELIMETER = ",";
 	private static final int TXT_FILE_LENGTH = 3;
 	private static final int POSITION_BOOK_TITLE = 0;
@@ -33,7 +34,7 @@ public class BookTest {
         Scanner fileScanner;
         
         books = new ArrayList<>();
-        file = new File("src//files/book_data.txt");
+        file = new File(TXT_FILE_LOCATION);
         fileScanner = null;
 
         try {
