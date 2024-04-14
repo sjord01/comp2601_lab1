@@ -42,14 +42,23 @@ public class BookTest {
 
             while (fileScanner.hasNext()) {
 
-                String oneLine = fileScanner.nextLine();
-                String[] bookData = oneLine.split(TXT_FILE_DELIMETER);
+                final String oneLine;
+                final String[] bookData;
+                
+                //oneLine -> per line of the .txt file
+                oneLine = fileScanner.nextLine();
+                bookData = oneLine.split(TXT_FILE_DELIMETER);
 
                 if (bookData.length == TXT_FILE_LENGTH) {
-                    String title = bookData[POSITION_BOOK_TITLE];
-                    String author = bookData[POSITION_BOOK_AUTHOR];
-                    int yearPublished = Integer.parseInt(bookData[POSITION_BOOK_YEAR_PUBLISHED]);
-                    Book book = new Book(title, author, yearPublished);
+                    final String bookTitle;
+                    final String bookAuthor;
+                    final int yearPublished;
+                    
+                    bookTitle = bookData[POSITION_BOOK_TITLE];
+                    bookAuthor = bookData[POSITION_BOOK_AUTHOR];
+                    yearPublished = Integer.parseInt(bookData[POSITION_BOOK_YEAR_PUBLISHED]);
+                    
+                    Book book = new Book(bookTitle, bookAuthor, yearPublished);
                     books.add(book);
                 }
             }
